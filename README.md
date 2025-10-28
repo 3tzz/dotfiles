@@ -58,6 +58,10 @@ This repository helps you quickly set up a consistent environment across machine
 - `venv` – Tool for creating isolated Python environments.
 - `setuptools` – Python package for building and distributing projects.
 
+### Rust & Cargo
+
+- `cargo` – Install Rust and Cargo (Rust’s package manager and build tool) using rustup.
+
 ### Shell
 
 - `eza` – Modern replacement for `ls` with colors and icons.
