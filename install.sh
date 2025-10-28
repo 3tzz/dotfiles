@@ -31,7 +31,11 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 # File explorator
 # sudo apt install ranger tree -y
 apt install ffmpeg 7zip jq poppler-utils fzf imagemagick
-git clone https://github.com/sxyazi/yazi.git
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source $HOME/.cargo/env
+
+git clone --depth 1 https://github.com/sxyazi/yazi.git
 cd yazi || {
   echo "Failed to change directory to yazi. Clone repo from https://github.com/sxyazi/yazi and make sure that u have rust in your setup."
 }
