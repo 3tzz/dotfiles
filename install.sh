@@ -32,7 +32,7 @@ ln -s -f "${BASE_DIR}"/ripgrep/rc ~/.config/ripgrep
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --all
 
-# File explorator
+# File Explorator
 # sudo apt install ranger tree -y
 apt install ffmpeg 7zip jq poppler-utils fzf imagemagick
 
@@ -48,6 +48,7 @@ mv target/release/yazi /usr/local/bin/ # if somthing wrong u can use mv instead 
 mv target/release/ya /usr/local/bin/   # if somthing wrong u can use mv instead of ln
 cd ..
 rm -rf yazi
+# env "YAZI_CONFIG_HOME=~/{$BASE_DIR}/yazi" yazi
 
 # Terminal multiplexer
 
@@ -60,6 +61,21 @@ apt install -y shellcheck shfmt
 
 # Shell zsh
 apt install -y zsh
+
+wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -qO install_oh_my_zsh.sh
+sh install_oh_my_zsh.sh --unattended
+rm install_oh_my_zsh.sh
+
+ZSH_CUSTOM=~/.oh-my-zsh/custom
+
+git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions                       #autosuggestions
+git clone https://github.com/clarketm/zsh-completions $ZSH_CUSTOM/plugins/zsh-completions                                #completions
+git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git $ZSH_CUSTOM/plugins/fast-syntax-highlighting #syntax highlighting
+git clone https://github.com/Aloxaf/fzf-tab.git $ZSH_CUSTOM/plugins/fzf-tab                                              #fzf tab
+
+# oh-my-posh
+sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
+sudo chmod +x /usr/local/bin/oh-my-posh
 
 # ln -s -f "${BASE_DIR}"/zsh/.zshrc ~
 
