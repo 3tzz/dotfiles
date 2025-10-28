@@ -8,6 +8,16 @@ apt update && apt upgrade -y
 # Essential tools
 apt install -y wget curl rsync man tldr btop make cmake
 
+# Nerd Fonts
+git clone https://github.com/ryanoasis/nerd-fonts.git
+cd nerd-fonts || {
+  echo "Failed to change directory to nerd-fonts"
+  exit 1
+}
+./install.sh
+cd ..
+rm -rf nerd-fonts
+
 # Rust & Cargo
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 source "${HOME}"/.cargo/env
