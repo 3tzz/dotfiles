@@ -92,7 +92,7 @@ git clone https://github.com/clarketm/zsh-completions $ZSH_CUSTOM/plugins/zsh-co
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git $ZSH_CUSTOM/plugins/fast-syntax-highlighting #syntax highlighting
 git clone https://github.com/Aloxaf/fzf-tab.git $ZSH_CUSTOM/plugins/fzf-tab                                              #fzf tab
 
-# ln -s -f "${BASE_DIR}"/zsh/.zshrc ~
+ln -s -f "${BASE_DIR}"/zsh/.zshrc ~
 
 # Change shell
-# chsh -s "$(which zsh)"
+chsh -s "$(which zsh)"
