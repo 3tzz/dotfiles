@@ -79,6 +79,7 @@ alias top="btop"
 alias z="fasd_cd -d"
 alias fd="fdfind"
 alias ls="eza --color=always --long --no-filesize --icons=always --no-time --no-user --no-permissions"
+alias ls="eza --icons=always --group-directories-first -l"
 alias clip-history="~/.local/share/gpaste/parse_history.sh"
 alias authente="flatpak run io.ente.auth"
 

@@ -9,7 +9,7 @@ apt update && apt upgrade -y
 apt install -y wget curl rsync man tldr btop make cmake
 
 # Nerd Fonts
-git clone https://github.com/ryanoasis/nerd-fonts.git
+git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
 cd nerd-fonts || {
   echo "Failed to change directory to nerd-fonts"
   exit 1
@@ -61,6 +61,8 @@ rm -rf yazi
 # env "YAZI_CONFIG_HOME=~/{$BASE_DIR}/yazi" yazi
 
 # Terminal multiplexer
+sudo apt install tmux -y
+ln -s -f "${BASE_DIR}"/tmux/.tmux.conf ~
 
 # Python essentials
 apt install -y python3-venv python3-pip python3-dev python3-setuptools pipx

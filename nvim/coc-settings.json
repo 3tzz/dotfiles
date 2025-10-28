@@ -1,0 +1,23 @@
+{
+  "cSpell.language": "en,pl",
+  "cSpell.availableLanguages": ["en", "pl"],
+  "cSpell.userWords": [
+    "dotfiles",
+    "freetzz",
+    "nums",
+    "struct",
+    "nunique",
+    "fenics",
+    "thiele",
+    "xdmf",
+    "ndarray",
+    "nyquist",
+    "runge_kutta"
+  ],
+  "cSpell.extendedDictionaries": {
+    "en": "/home/freetzz/.dotfiles/txt/whitelists/en.dict",
+    "pl": "/home/freetzz/.dotfiles/txt/whitelists/pl.dict"
+  },
+  "cSpell.diagnosticLevel": "hint",
+  "cSpell.enabledLanguageIds": ["html", "python", "rust"]
+}
