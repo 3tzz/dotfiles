@@ -85,6 +85,7 @@ This repository helps you quickly set up a consistent environment across machine
 Clone the repository:
 
 ```bash
+mkdir ~/.dotfiles
 git clone https://github.com/3tzz/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ./install.sh
