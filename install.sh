@@ -32,7 +32,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 # sudo apt install ranger tree -y
 apt install ffmpeg 7zip jq poppler-utils fzf imagemagick
 
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 source $HOME/.cargo/env
 
 git clone --depth 1 https://github.com/sxyazi/yazi.git
