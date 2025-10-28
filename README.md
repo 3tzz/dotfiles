@@ -18,6 +18,7 @@ This repository helps you quickly set up a consistent environment across machine
 - `btop` – Resource monitor (CPU, memory, disks, network) with a nice interface.
 - `make` – Automates building and compiling projects from Makefiles.
 - `cmake` – Cross-platform build system generator; prepares projects for compilation.
+- `uznip` – Extracts files from `.zip` archives.
 
 ### Version Control
 
@@ -44,11 +45,11 @@ This repository helps you quickly set up a consistent environment across machine
 
 ### File Explorer
 
-- `yazi` – Fast terminal file explorer with zoxide compatibility. TODO to add
+- `yazi` – Fast terminal file explorer with zoxide compatibility.
 
 ### Terminal Multiplexer
 
-- `tmux` – Terminal session manager for splitting, detaching, and multitasking.TODO to add
+- `tmux` – Terminal session manager for splitting, detaching, and multitasking.
 
 ### Python Essentials
 

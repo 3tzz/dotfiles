@@ -6,7 +6,7 @@ BASE_DIR=$(dirname $(realpath $0))
 apt update && apt upgrade -y
 
 # Essential tools
-apt install -y wget curl rsync man tldr btop make cmake
+apt install -y wget curl rsync man tldr btop make cmake unzip
 
 # Nerd Fonts
 git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
@@ -61,7 +61,7 @@ rm -rf yazi
 # env "YAZI_CONFIG_HOME=~/{$BASE_DIR}/yazi" yazi
 
 # Terminal multiplexer
-sudo apt install tmux -y
+apt install tmux -y
 ln -s -f "${BASE_DIR}"/tmux/.tmux.conf ~
 
 # Python essentials
