@@ -6,6 +6,17 @@ This repository helps you quickly set up a consistent environment across machine
 
 ---
 
+## Installation
+
+Clone the repository:
+
+```bash
+mkdir ~/.dotfiles
+git clone https://github.com/3tzz/dotfiles.git ~/.dotfiles
+cd ~/.dotfiles
+./install.sh
+```
+
 ## Features
 
 ### Essential Tools
@@ -74,20 +85,4 @@ This repository helps you quickly set up a consistent environment across machine
   - `Oh-My-Zsh`
   - `Oh-My-Posh`
 
-  * Zsh with Oh-My-Zsh, Powerlevel10k theme, plugins (autosuggestions, syntax highlighting, fzf tab completion)
-
-### **Fonts & Themes**: Nerd Fonts, Oh-My-Posh
-
 ---
-
-## Installation
-
-Clone the repository:
-
-```bash
-mkdir ~/.dotfiles
-git clone https://github.com/3tzz/dotfiles.git ~/.dotfiles
-cd ~/.dotfiles
-./install.sh
-```
-

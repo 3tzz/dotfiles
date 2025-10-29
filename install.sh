@@ -58,7 +58,7 @@ sudo mv target/release/yazi /usr/local/bin/ # if somthing wrong u can use mv ins
 sudo mv target/release/ya /usr/local/bin/   # if somthing wrong u can use mv instead of ln
 cd ..
 rm -rf yazi
-# env "YAZI_CONFIG_HOME=~/{$BASE_DIR}/yazi" yazi
+env "YAZI_CONFIG_HOME=~/{$BASE_DIR}/yazi" yazi
 
 # Terminal multiplexer
 sudo apt install tmux -y
