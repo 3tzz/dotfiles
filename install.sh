@@ -44,7 +44,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 # File Explorator
 # sudo sudo apt install ranger tree -y
-sudo apt install ffmpeg 7zip jq poppler-utils fzf imagemagick
+sudo apt install ffmpeg 7zip jq poppler-utils imagemagick
 
 cd yazi || {
   echo "Failed to change directory to yazi."
