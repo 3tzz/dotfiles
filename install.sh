@@ -3,10 +3,10 @@
 BASE_DIR=$(dirname $(realpath $0))
 
 # System update
-apt update && apt upgrade -y
+sudo apt update && apt upgrade -y
 
 # Essential tools
-apt install -y wget curl rsync man tldr btop make cmake unzip
+sudo apt install -y wget curl rsync man tldr btop make cmake unzip
 
 # Nerd Fonts
 git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
@@ -23,19 +23,19 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 source "${HOME}"/.cargo/env
 
 # Git
-apt install -y git tig git-delta
+sudo apt install -y git tig git-delta
 ln -s -f "${BASE_DIR}"/git/.gitconfig ~
 
 # SSH
-apt install openssh-client openssh-server -y
+sudo apt install openssh-client openssh-server -y
 ln -s -f "${BASE_DIR}"/ssh/config ~/.ssh
 
 # Text Editor
-apt install vim neovim -y
+sudo apt install vim neovim -y
 ln -s -f "${BASE_DIR}"/vim/.vimrc ~
 
 # File Search Tools
-apt install ripgrep fd-find zoxide -y
+sudo apt install ripgrep fd-find zoxide -y
 mkdir -p ~/.config/ripgrep
 ln -s -f "${BASE_DIR}"/ripgrep/rc ~/.config/ripgrep
 
@@ -43,8 +43,8 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --all
 
 # File Explorator
-# sudo apt install ranger tree -y
-apt install ffmpeg 7zip jq poppler-utils fzf imagemagick
+# sudo sudo apt install ranger tree -y
+sudo apt install ffmpeg 7zip jq poppler-utils fzf imagemagick
 
 cd yazi || {
   echo "Failed to change directory to yazi."
@@ -54,25 +54,25 @@ cd yazi || {
   echo "Failed to change directory to yazi. Clone repo from https://github.com/sxyazi/yazi and make sure that u have rust in your setup."
 }
 cargo build --release --locked
-mv target/release/yazi /usr/local/bin/ # if somthing wrong u can use mv instead of ln
-mv target/release/ya /usr/local/bin/   # if somthing wrong u can use mv instead of ln
+sudo mv target/release/yazi /usr/local/bin/ # if somthing wrong u can use mv instead of ln
+sudo mv target/release/ya /usr/local/bin/   # if somthing wrong u can use mv instead of ln
 cd ..
 rm -rf yazi
 # env "YAZI_CONFIG_HOME=~/{$BASE_DIR}/yazi" yazi
 
 # Terminal multiplexer
-apt install tmux -y
+sudo apt install tmux -y
 ln -s -f "${BASE_DIR}"/tmux/.tmux.conf ~
 
 # Python essentials
-apt install -y python3-venv python3-pip python3-dev python3-setuptools pipx
+sudo apt install -y python3-venv python3-pip python3-dev python3-setuptools pipx
 
 # Shell init
-apt install -y eza
-apt install -y shellcheck shfmt
+sudo apt install -y eza
+sudo apt install -y shellcheck shfmt
 
 # Shell zsh
-apt install -y zsh
+sudo apt install -y zsh
 
 #oh-my-posh
 curl -s https://ohmyposh.dev/install.sh | bash -s
