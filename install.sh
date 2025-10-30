@@ -8,15 +8,15 @@ sudo apt update && apt upgrade -y
 # Essential tools
 sudo apt install -y wget curl rsync man tldr btop make cmake unzip
 
-# Nerd Fonts
-git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
-cd nerd-fonts || {
-  echo "Failed to change directory to nerd-fonts"
-  exit 1
-}
-./install.sh
-cd ..
-rm -rf nerd-fonts
+# # Nerd Fonts
+# git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
+# cd nerd-fonts || {
+#   echo "Failed to change directory to nerd-fonts"
+#   exit 1
+# }
+# ./install.sh
+# cd ..
+# rm -rf nerd-fonts
 
 # Rust & Cargo
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
@@ -58,7 +58,8 @@ sudo mv target/release/yazi /usr/local/bin/ # if somthing wrong u can use mv ins
 sudo mv target/release/ya /usr/local/bin/   # if somthing wrong u can use mv instead of ln
 cd ..
 rm -rf yazi
-env "YAZI_CONFIG_HOME=~/{$BASE_DIR}/yazi" yazi
+cd ..
+ln -s ~/{$BASE_DIR}/yazi ~/.config/yazi
 
 # Terminal multiplexer
 sudo apt install tmux -y
@@ -93,6 +94,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/z
 git clone https://github.com/clarketm/zsh-completions $ZSH_CUSTOM/plugins/zsh-completions                                #completions
 git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git $ZSH_CUSTOM/plugins/fast-syntax-highlighting #syntax highlighting
 git clone https://github.com/Aloxaf/fzf-tab.git $ZSH_CUSTOM/plugins/fzf-tab                                              #fzf tab
+git clone https://github.com/junegunn/fzf-git.sh
 
 ln -s -f "${BASE_DIR}"/zsh/.zshrc ~
 

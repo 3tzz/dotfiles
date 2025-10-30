@@ -43,7 +43,7 @@ function y() {
 	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
 		builtin cd -- "$cwd"
 	fi
-  echo $cwd
+  # echo $cwd
   # zoxide add $cwd
 	rm -f -- "$tmp"
 }
