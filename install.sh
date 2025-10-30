@@ -28,7 +28,6 @@ cd "${BASE_DIR}"/nvim
 wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.appimage
 chmod u+x nvim-linux-x86_64.appimage
 sudo mv nvim-linux-x86_64.appimage /usr/local/bin/nvim
-
 cd $BASE_DIR
 
 # File Search Tools
@@ -40,7 +39,6 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --all
 
 # File Explorator
-# sudo sudo apt install ranger tree -y
 sudo apt install ffmpeg 7zip jq poppler-utils imagemagick
 
 cargo install --force yazi-build
@@ -63,10 +61,6 @@ sudo apt install -y zsh
 curl -s https://ohmyposh.dev/install.sh | bash -s
 export PATH=$PATH:~/.local/bin
 oh-my-posh font install meslo
-
-# # oh-my-posh
-# sudo wget https://github.com/JanDeDobbeleer/oh-my-posh/releases/latest/download/posh-linux-amd64 -O /usr/local/bin/oh-my-posh
-# sudo chmod +x /usr/local/bin/oh-my-posh
 
 wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -qO install_oh_my_zsh.sh
 sh install_oh_my_zsh.sh --unattended
