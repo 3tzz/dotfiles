@@ -3,20 +3,10 @@
 BASE_DIR=$(dirname $(realpath $0))
 
 # System update
-sudo apt update && apt upgrade -y
+sudo apt update && apt full-upgrade -y
 
 # Essential tools
 sudo apt install -y wget curl rsync man tldr btop make cmake unzip
-
-# # Nerd Fonts
-# git clone --depth 1 https://github.com/ryanoasis/nerd-fonts.git
-# cd nerd-fonts || {
-#   echo "Failed to change directory to nerd-fonts"
-#   exit 1
-# }
-# ./install.sh
-# cd ..
-# rm -rf nerd-fonts
 
 # Rust & Cargo
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
@@ -31,8 +21,15 @@ sudo apt install openssh-client openssh-server -y
 ln -s -f "${BASE_DIR}"/ssh/config ~/.ssh
 
 # Text Editor
-sudo apt install vim neovim -y
+sudo apt install vim -y
 ln -s -f "${BASE_DIR}"/vim/.vimrc ~
+
+cd "${BASE_DIR}"/nvim
+wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux-x86_64.appimage
+chmod u+x nvim-linux-x86_64.appimage
+sudo mv nvim-linux-x86_64.appimage /usr/local/bin/nvim
+
+cd $BASE_DIR
 
 # File Search Tools
 sudo apt install ripgrep fd-find zoxide -y

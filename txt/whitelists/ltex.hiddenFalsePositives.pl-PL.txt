@@ -1,0 +1,1 @@
+{"rule":"NIETYPOWA_KOMBINACJA_DUZYCH_I_MALYCH_LITER","sentence":"^\\QInstalacja FEniCS/Elmer\\E$"}
