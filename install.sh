@@ -46,20 +46,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 # sudo sudo apt install ranger tree -y
 sudo apt install ffmpeg 7zip jq poppler-utils imagemagick
 
-cd yazi || {
-  echo "Failed to change directory to yazi."
-}
-git clone --depth 1 https://github.com/sxyazi/yazi.git
-cd yazi || {
-  echo "Failed to change directory to yazi. Clone repo from https://github.com/sxyazi/yazi and make sure that u have rust in your setup."
-}
-cargo build --release --locked
-sudo mv target/release/yazi /usr/local/bin/ # if somthing wrong u can use mv instead of ln
-sudo mv target/release/ya /usr/local/bin/   # if somthing wrong u can use mv instead of ln
-cd ..
-rm -rf yazi
-cd ..
-ln -s ~/{$BASE_DIR}/yazi ~/.config/yazi
+cargo install --force yazi-build
 
 # Terminal multiplexer
 sudo apt install tmux -y
