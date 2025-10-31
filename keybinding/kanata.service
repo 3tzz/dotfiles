@@ -1,0 +1,13 @@
+[Install]
+WantedBy=default.target
+
+[Unit]
+Description=Kanata keyboard remapper
+After=graphical-session.target
+
+[Service]
+ExecStart=%h~/.cargo/bin/kanata --cfg %h~/.dotfiles/keybinding/kanata.kbd
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
