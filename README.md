@@ -17,6 +17,12 @@ cd ~/.dotfiles
 ./install.sh
 ```
 
+### Additional keybinding
+
+```bash
+./keybinding/install_kanata.sh
+```
+
 ## Features
 
 ### Essential Tools
@@ -80,9 +86,12 @@ cd ~/.dotfiles
 - `shellcheck` – Linter for shell scripts to catch errors and improve code quality.
 - `shfmt` – Formatter for shell scripts to enforce consistent style.
 - `zsh`
-
   - `Nerd fonts`
   - `Oh-My-Zsh`
   - `Oh-My-Posh`
+
+### Keybinding
+
+- `kanata` – Provide additional compressed keyboard layers. To see (eof) or modify setup look to `./keybinding/kanata.kbd`.
 
 ---

@@ -6,7 +6,7 @@ Description=Kanata keyboard remapper
 After=graphical-session.target
 
 [Service]
-ExecStart=%h~/.cargo/bin/kanata --cfg %h~/.dotfiles/keybinding/kanata.kbd
+ExecStart=
 Restart=on-failure
 
 [Install]
